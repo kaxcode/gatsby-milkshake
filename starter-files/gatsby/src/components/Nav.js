@@ -13,6 +13,7 @@ const NavStyles = styled.nav`
     padding: 0;
     text-align: center;
     list-style: none;
+    margin-top: -6rem;
 
     display: grid;
     grid-template-columns: 1fr 1fr auto 1fr 1fr;
@@ -40,6 +41,9 @@ const NavStyles = styled.nav`
     font-size: 3rem;
     text-decoration: none;
     &:hover {
+      color: var(--red);
+    }
+    &[aria-current="page"] {
       color: var(--red);
     }
   }
