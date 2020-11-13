@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+// eslint-disable-next-line import/no-unresolved
 import PatchEvent, { set, unset } from 'part:@sanity/form-builder/patch-event';
 
 function createPatchFrom(value) {
@@ -28,6 +29,6 @@ export default function PriceInput({ type, value, onChange, inputComponent }) {
   );
 }
 
-PriceInput.focus = function() {
+PriceInput.focus = function () {
   this._inputElement.focus();
 };
