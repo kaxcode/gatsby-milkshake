@@ -3,7 +3,7 @@ import React from 'react';
 import PatchEvent, { set, unset } from 'part:@sanity/form-builder/patch-event';
 
 function createPatchFrom(value) {
-  PatchEvent.from(value === '' ? unset() : set(Number(value)))
+  return PatchEvent.from(value === '' ? unset() : set(Number(value)));
 }
 
 const formatMoney = Intl.NumberFormat('en-US', {
@@ -28,6 +28,6 @@ export default function PriceInput({ type, value, onChange, inputComponent }) {
   );
 }
 
-PriceInput.focus = function () {
+PriceInput.focus = function() {
   this._inputElement.focus();
 };
